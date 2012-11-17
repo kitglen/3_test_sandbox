@@ -1,0 +1,34 @@
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0610ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=3-test-Sandbox-test collection=Test documents=[{"_id"=>"50a807bd5ae18cd675000001", "name"=>"hoordjxvchoi"}] flags=[] (0.1740ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=3-test-Sandbox-test command={:count=>"Test", :query=>{}} (1900.3122ms)
+Processing by Api::V1::TestsController#create as JSON
+  Parameters: {"test"=>{"name"=>"nismyjlsrxna"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=3-test-Sandbox-test collection=Test documents=[{"_id"=>"50a807bf5ae18cd675000002", "name"=>"nismyjlsrxna"}] flags=[] (0.2031ms)
+Completed 201 Created in 837ms (Views: 0.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=3-test-Sandbox-test command={:count=>"Test", :query=>{}} (0.5388ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=3-test-Sandbox-test collection=Test documents=[{"_id"=>"50a807c05ae18cd675000003", "name"=>"hoordjxvchoi"}] flags=[] (0.1910ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=3-test-Sandbox-test command={:count=>"Test", :query=>{}} (0.4630ms)
+Processing by Api::V1::TestsController#destroy as JSON
+  Parameters: {"id"=>"50a807c05ae18cd675000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=3-test-Sandbox-test collection=Test selector={"_id"=>"50a807c05ae18cd675000003"} flags=[] limit=0 skip=0 fields=nil (0.5841ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=3-test-Sandbox-test collection=Test selector={"_id"=>"50a807c05ae18cd675000003"} flags=[:remove_first] (0.2248ms)
+Completed 204 No Content in 4ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=3-test-Sandbox-test command={:count=>"Test", :query=>{}} (0.4761ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=3-test-Sandbox-test collection=Test documents=[{"_id"=>"50a807c05ae18cd675000004", "name"=>"hoordjxvchoi"}] flags=[] (0.1612ms)
+Processing by Api::V1::TestsController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=3-test-Sandbox-test collection=Test selector={} flags=[] limit=0 skip=0 fields=nil (0.4611ms)
+Completed 200 OK in 6ms (Views: 0.7ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=3-test-Sandbox-test collection=Test documents=[{"_id"=>"50a807c05ae18cd675000005", "name"=>"hoordjxvchoi"}] flags=[] (0.1631ms)
+Processing by Api::V1::TestsController#new as JSON
+Completed 200 OK in 4ms (Views: 0.4ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=3-test-Sandbox-test collection=Test documents=[{"_id"=>"50a807c05ae18cd675000007", "name"=>"hoordjxvchoi"}] flags=[] (0.2160ms)
+Processing by Api::V1::TestsController#show as JSON
+  Parameters: {"id"=>"50a807c05ae18cd675000007"}
+  MOPED: 127.0.0.1:27017 QUERY        database=3-test-Sandbox-test collection=Test selector={"_id"=>"50a807c05ae18cd675000007"} flags=[] limit=0 skip=0 fields=nil (0.4032ms)
+Completed 200 OK in 5ms (Views: 0.4ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=3-test-Sandbox-test collection=Test documents=[{"_id"=>"50a807c05ae18cd675000008", "name"=>"hoordjxvchoi"}] flags=[] (0.1490ms)
+Processing by Api::V1::TestsController#update as JSON
+  Parameters: {"test"=>{"name"=>"ucpnnczifowj"}, "id"=>"50a807c05ae18cd675000008"}
+  MOPED: 127.0.0.1:27017 QUERY        database=3-test-Sandbox-test collection=Test selector={"_id"=>"50a807c05ae18cd675000008"} flags=[] limit=0 skip=0 fields=nil (0.3889ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=3-test-Sandbox-test collection=Test selector={"_id"=>"50a807c05ae18cd675000008"} update={"$set"=>{"name"=>"ucpnnczifowj"}} flags=[] (0.1442ms)
+Completed 204 No Content in 6ms

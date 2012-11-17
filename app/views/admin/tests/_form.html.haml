@@ -1,0 +1,10 @@
+= simple_form_for(@test, as: :test, url: @test.new_record? ? admin_tests_path : admin_test_path(@test)) do |f|
+  = f.error_notification
+  .form-inputs
+    
+    
+    = f.input :name
+    
+    
+  .form-actions
+    = f.button :submit

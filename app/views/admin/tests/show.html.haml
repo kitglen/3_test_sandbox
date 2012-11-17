@@ -1,0 +1,14 @@
+%h1 Showing test
+
+%table
+  
+  %tr
+    %td Id
+    %td= @test.id
+  
+  %tr
+    %td Name
+    %td= @test.name
+  
+= link_to 'Edit', edit_admin_test_path(@test)
+= link_to 'Back', admin_tests_path
